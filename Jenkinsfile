@@ -12,7 +12,7 @@ try {
 node{
 
   stage('Checkout') {
-    git 'https://github.com/edureka-git/DevOpsClassCodes'
+    git 'https://github.com/Arnab1318/CI-CD_Delloite'
     
   }
 
@@ -31,7 +31,7 @@ stage('Deployment') {
             // Deployment
                 script {
                     echo "deployment"
-                    sh 'cp /var/lib/jenkins/workspace/package_1/target/addressbook.war /var/lib/tomcat8/webapps/'
+                    sh "/ci.sh"
             }
         }
         stage('publish html report') {
@@ -52,7 +52,7 @@ finally {
      // currentBuild.result must be non-null for this step to work.
      step([$class: 'Mailer',
         notifyEveryUnstableBuild: true,
-        recipients: 'shubham.k@edureka.co',
+        recipients: 'arnab13.naskar#gmail.com',
         sendToIndividuals: true])
  }
 }

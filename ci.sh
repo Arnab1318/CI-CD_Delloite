@@ -1,9 +1,4 @@
 #!/bin/sh
-
-echo "Changing permission of war Files"
-
-sudo chmod +rwx java-components/*.jar
-
 echo "Removing old jars"
 sudo rm /home/ec2-user/arnab/*.war
 echo "Copied war file"
