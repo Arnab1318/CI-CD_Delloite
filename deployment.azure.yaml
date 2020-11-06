@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: java 
-        image: mydockerimagerepo/mydockerimagerepo:#{Build.BuildId}#
+        image: mydockerimagerepo/javaimagerepo:#{Build.BuildId}#
         ports: 
         - containerPort: 80 
 --- 
