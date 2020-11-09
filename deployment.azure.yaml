@@ -6,7 +6,7 @@ spec:
   selector: 
     matchLabels: 
       app: java 
-  replicas: 5 # tells deployment to run 2 pods matching the template 
+  replicas: 3 # tells deployment to run 2 pods matching the template 
   template:
     metadata: 
       labels: 
@@ -16,7 +16,7 @@ spec:
       - name: java 
         image: mydockerimagerepo/javaimagerepo:#{Build.BuildId}#
         ports: 
-        - containerPort: 80 
+        - containerPort: 8080 
 --- 
 # https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service  
 kind: Service 
@@ -28,6 +28,6 @@ spec:
     app: java 
   ports: 
   - protocol: TCP 
-    port: 80 
-    targetPort: 80 
+    port: 8080 
+    targetPort: 8080 
   type: LoadBalancer
