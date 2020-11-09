@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: java 
-        image: mydockerimagerepo/javaimage:#{Build.BuildId}#
+        image: mydockerimagerepo.azurecr.io/javaimage:#{Build.BuildId}#
         ports: 
         - containerPort: 8080 
 --- 
